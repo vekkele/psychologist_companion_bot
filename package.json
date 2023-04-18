@@ -1,0 +1,27 @@
+{
+  "name": "psychologist_companion_bot",
+  "version": "1.0.0",
+  "description": "Companion Telegram bot for psychologist",
+  "main": "src/main.ts",
+  "scripts": {
+    "dev": "tsx watch src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vekkele/psychologist_companion_bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vekkele/psychologist_companion_bot/issues"
+  },
+  "homepage": "https://github.com/vekkele/psychologist_companion_bot#readme",
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "grammy": "^1.15.3"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "tsx": "^3.12.6"
+  }
+}
