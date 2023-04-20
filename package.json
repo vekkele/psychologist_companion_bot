@@ -4,7 +4,7 @@
   "description": "Companion Telegram bot for psychologist",
   "main": "src/main.ts",
   "scripts": {
-    "dev": "tsx watch src/main.ts"
+    "dev": "export DEBUG=\"grammy*\" && tsx watch src/main.ts"
   },
   "repository": {
     "type": "git",
