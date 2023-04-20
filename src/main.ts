@@ -1,7 +1,5 @@
-import dotenv from "dotenv";
 import { createBot } from "./bot";
-
-dotenv.config();
+import "./env";
 
 const bot = createBot();
 
