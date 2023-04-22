@@ -1,16 +1,18 @@
 import { Bot } from "grammy";
+import { description } from "./constants/strings";
+import start from "./features/start";
+import therapy from "./features/therapy";
+import { commands } from "./constants/commands";
 
 export function createBot() {
   const bot = new Bot(process.env.TELEGRAM_TOKEN ?? "");
 
-  bot.on("message", async (ctx) => {
-    const name = ctx.from.first_name;
-    const reply = ctx.message.text
-      ? `${ctx.message.text}, ${name}`
-      : "invalid message";
+  bot.api.setMyDescription(description);
 
-    await ctx.reply(reply);
-  });
+  bot.use(start);
+  bot.use(therapy);
+
+  bot.api.setMyCommands(commands);
 
   return bot;
 }
